@@ -2,61 +2,13 @@ header
   height: 500px
   display: flex
 
-  div
-    display: inline-block
-
-  .leftSection
-    position: relative
-    display: flex
-    width: 35%
-    height: 100%
-
-
-    img
-      position: absolute
-      right: 0
-      max-width: 100%
-
   .midleSection
-    display: flex
     align-items: flex-end
     justify-content: space-around
-    width: 15%
-    height: 100%
-    background-color: $myRed
-
-    .arrowDown
-      position: relative
-      display: block
-      margin-bottom: 30px
-
-      span, span:before
-        position: relative
-        content: ""
-        display: block
-        height: 3px
-        width: 25px
-        background-color: white
-        transform: rotate(45deg)
-        left: -10px
-
-      span:before
-        transform: rotate(90deg)
-        left: 14px
-        top: -14px
-
-      a:hover
-        span, span:before
-          background-color: black
-
-
 
   .rightSection
     position: relative
-    display: flex
     align-items: center
-    width: 50%
-    height: 100%
 
     .textWrap
       position: absolute
@@ -105,9 +57,6 @@ header
           transform: rotate(90deg)
           top: 27px
           left: 33px
-
-
-
 
   @media (max-width: 720px)
     .leftSection
