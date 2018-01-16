@@ -1,22 +1,89 @@
 .leftSection, .midleSection, .rightSection
   display: inline-block
 
+//*** LEFT SECTION ***
+
 .leftSection
   position: relative
   display: flex
   width: 35%
   height: 100%
 
+  &.withText
+    align-items: center
+    justify-content: space-around
+
+    .text-wrap
+      position: absolute
+      right: 10px
+      margin-left: 20px
+
+      h2
+        font-size: 55px
+        max-width: 250px
+        font-weight: 300
+        margin: 0 0 5px 0
+        line-height: 1
+        padding-left: 10px
+
+      p
+        font-size: 20px
+        line-height: 1
+        max-width: 200px
+        margin-top: -9px
+        margin-left: 35px
+
+      .separator
+        position: absolute
+
+        span, span:before
+          content: ""
+          display: block
+          height: 4px
+          width: 30px
+          background-color: $myRed
+          position: relative
+
+        span:before
+          transform: rotate(90deg)
+          top: -17px
+          left: -17px
   img
     position: absolute
     right: 0
     max-width: 100%
+
+//*** MIDDLE SECTION ***
 
 .midleSection
   display: flex
   width: 15%
   height: 100%
   background-color: $myRed
+
+  &.header
+    align-items: flex-end
+    justify-content: space-around
+
+  &.article
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+    .yearWrap
+      text-align: center
+      h2
+        color: white
+        line-height: 0.8
+        font-weight: 300
+        max-width: 170px
+        font-size: 80px
+        margin: 0
+      h3
+        color: white
+        font-weight: 300
+        margin-top: 0px
+        font-size: 37px
 
   .arrow
     position: relative
@@ -45,7 +112,196 @@
     &.arrowUp
       transform: rotate(180deg)
 
+//*** RIGHT SECTION ***
+
 .rightSection
   display: flex
   width: 50%
   height: 100%
+
+  &.header
+    position: relative
+    align-items: center
+    .textWrap
+      position: absolute
+      left: -165px
+      text-align: right
+      h2
+        font-size: 47px
+        font-weight: 300
+        margin: 0px 0px -15px 0px
+      h1
+        font-size: 80px
+        font-weight: 300
+        margin: 0
+        em
+          color: white
+          font-style: normal
+      p
+        float: right
+        max-width: 300px
+        font-size: 23px
+        line-height: 1.0
+        margin-top: 20px
+        em
+          color: $myRed
+          font-style: normal
+
+      .separator
+        position: absolute
+        right: -25px
+        top: 125px
+
+        span, span:before, span:after
+          content: ""
+          display: block
+          height: 6px
+          width: 60px
+          background-color: $myRed
+          position: relative
+
+        span:before
+          transform: rotate(90deg)
+          top: -33px
+          left: 33px
+
+        span:after
+          transform: rotate(90deg)
+          top: 27px
+          left: 33px
+
+  &.article
+    flex-direction: column
+    justify-content: space-between
+    overflow: hidden
+
+    .img-right
+      width: 100%
+      height: 300px
+      background:
+        image: url(../img/article1-img.jpg)
+        position: center
+        size: cover
+      border-bottom: 7px solid $myRed
+
+    p
+      font-size: 25px
+      line-height: 1
+      color: black
+      padding: 20px
+      em
+        font-style: normal
+        color: $myRed
+
+    .readMore
+      margin-right: 20px
+      a
+        float: right
+        color: $myRed
+        font-size: 24px
+        margin-bottom: 40px
+        padding: 15px
+
+      .separator
+        float: right
+        position: relative
+        left: -32px
+        top: 51px
+
+      span, span:before
+        position: absolute
+        content: ""
+        display: block
+        height: 3px
+        width: 25px
+        background-color: $myRed
+
+      span:before
+        transform: rotate(90deg)
+        left: 14px
+        top: -14px
+
+//*** MOBILE STYLE***
+
+@media (max-width: 720px)
+
+  .leftSection
+    &.withImage
+      align-items: center
+
+    &.withText
+      .text-wrap
+        h2
+          font-size: 30px
+          padding: 0
+          margin: 0
+        p
+          font-size: 15px
+          margin: 4px 0 0 0
+          padding: 0
+
+        .separator
+          span
+            height: 2px
+            width: 30px
+
+          span:before
+            display: none
+          span::after
+            display: none
+
+  .midleSection
+    &.article
+      .yearWrap
+        h2
+          font-size: 55px !important
+        h3
+          font-size: 25px !important
+
+  .rightSection
+    &.header
+      .textWrap
+        left: -92px
+
+        h2
+          margin-bottom: -10px
+          font-size: 26px
+        h1
+          font-size: 45px
+
+        p
+          max-width: 180px
+          font-size: 16px
+          margin-top: 15px
+
+        .separator
+          right: -10px
+          top: 70px
+
+          span, span:before, span:after
+            height: 4px
+            width: 40px
+
+          span:before
+            top: -22px
+            left: 22px
+
+          span:after
+            top: 18px
+            left: 22px
+
+    &.article
+      .img-right
+        height: 350px
+      p
+        font-size: 16px
+        padding: 10px
+
+      .readMore
+        margin-right: 10px
+
+        a
+          font-size: 20px
+
+        .separator
+          top: 47px
