@@ -5,11 +5,31 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>{{ page.title }}</title>
       <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="assets/css/main.css">
+      <link rel="shortcut icon" href="../../../../assets/img/favicon.png" />
+      <link rel="stylesheet" href="../../../../assets/css/main.css">
   </head>
   <body>
-
-    {{ content }}
-
+    <div class="back">
+      <div class="arrow arrowLeft">
+        <a href="http://localhost:4000/#{{page.sectionName}}"><span></span></a>
+      </div>
+    </div>
+    <div class="section-blog">
+      <div class="text-wrap">
+        <h2>{{ page.title }}</h2>
+        <div class="separator">
+          <span></span>
+        </div>
+        <p>{{ page.subtitle }}</p>
+      </div>
+      {{ content }}
+    </div>
+    <footer>
+      <div class="footer-text">
+        <p>All content copyright 2018.</br> Website dezvoltat de
+          <a href="mailto:neamtu.bc@gmail.com">neamtu.bc@gmail.com</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
