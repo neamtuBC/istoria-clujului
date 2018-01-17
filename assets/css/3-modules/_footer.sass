@@ -1,0 +1,45 @@
+footer
+  height: 300px
+  display: flex
+  .leftSection
+    display: flex
+    align-items: flex-end
+    p
+      display: block
+      font-family: "Fira Sans", sans-serif
+      color: black
+      padding-left: 20px
+
+      a
+        color: $myRed
+
+  .midleSection
+    &.article
+      align-items: center
+      justify-content: space-around
+
+  .rightSection
+    position: relative
+    img
+      position: absolute
+      right: 0px
+      max-width: 200%
+
+    .image-footer
+      width: 100%
+      background:
+        image: url(../img/footer-img.png)
+        position: center bottom
+        size: contain
+        repeat: no-repeat
+
+@media (max-width: 720px)
+  .leftSection
+    p
+      padding-left: 10px
+      font-size: 10px
+      margin-bottom: 10px
+  // background:
+  //   image: url(../img/footer-img.png)
+  //   position: center top
+  //   size: cover
