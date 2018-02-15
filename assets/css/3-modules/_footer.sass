@@ -17,6 +17,7 @@ footer
     &.article
       align-items: center
       justify-content: space-around
+      flex-direction: row
 
   .rightSection
     position: relative
@@ -34,12 +35,18 @@ footer
         repeat: no-repeat
 
 @media (max-width: 720px)
-  .leftSection
-    p
-      padding-left: 10px
-      font-size: 10px
-      margin-bottom: 10px
-  // background:
-  //   image: url(../img/footer-img.png)
-  //   position: center top
-  //   size: cover
+  footer
+    .midleSection
+      &.article
+        .yearWrap
+          h2
+            display: none
+    .leftSection
+      p
+        padding-left: 10px
+        font-size: 10px
+        margin-bottom: 10px
+    // background:
+    //   image: url(../img/footer-img.png)
+    //   position: center top
+    //   size: cover
